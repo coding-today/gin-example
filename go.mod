@@ -1,4 +1,4 @@
-module github.com/Coder-stars/gin-examplee
+module github.com/Coder-stars/gin-example
 
 go 1.16
 

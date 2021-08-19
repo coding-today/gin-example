@@ -9,7 +9,7 @@
 			"type": "go",
 			"request": "launch",
 			"mode": "auto",
-			"program": "/Users/coder_li/Go/src/github.com/go-gin-example/main.go"
+			"program": "/Users/coder_li/Go/src/github.com/gin-example/main.go"
 		}
 	]
 }

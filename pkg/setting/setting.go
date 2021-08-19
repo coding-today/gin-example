@@ -28,6 +28,7 @@ func init() {
 	}
 	LoadBase()
 	LoadServer()
+	LoadApp()
 }
 
 func LoadBase() {

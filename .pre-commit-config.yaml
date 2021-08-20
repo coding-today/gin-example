@@ -14,7 +14,8 @@
     #
     # Consider adding aliases to longer-named hooks for easier CLI usage.
     # ==========================================================================
--   repo: https://github.com/tekwizely/pre-commit-golang
+repos:
+  - repo: https://github.com/tekwizely/pre-commit-golang
     rev: master
     hooks:
     #
@@ -68,18 +69,18 @@
     # Formatters
     #
     -   id: go-fmt
-    -   id: go-fmt-repo
-    -   id: go-fumpt        # replaces go-fmt
-    -   id: go-fumpt-repo   # replaces go-fmt-repo
-    -   id: go-imports      # replaces go-fmt
-    -   id: go-imports-repo # replaces go-fmt-repo
-    -   id: go-returns      # replaces go-imports & go-fmt
-    -   id: go-returns-repo # replaces go-imports-repo & go-fmt-repo
+    # -   id: go-fmt-repo
+    # -   id: go-fumpt        # replaces go-fmt
+    # -   id: go-fumpt-repo   # replaces go-fmt-repo
+    # -   id: go-imports      # replaces go-fmt
+    # -   id: go-imports-repo # replaces go-fmt-repo
+    # -   id: go-returns      # replaces go-imports & go-fmt
+    # -   id: go-returns-repo # replaces go-imports-repo & go-fmt-repo
     #
     # Style Checkers
     #
     -   id: go-lint
-    -   id: go-critic
+    # -   id: go-critic
     #
     # GolangCI-Lint
     # - Fast Multi-Linter
@@ -88,10 +89,10 @@
     # - https://github.com/golangci/golangci-lint
     #
     -   id: golangci-lint
-    -   id: golangci-lint-mod
-    -   id: golangci-lint-pkg
-    -   id: golangci-lint-repo-mod
-    -   id: golangci-lint-repo-pkg
+    # -   id: golangci-lint-mod
+    # -   id: golangci-lint-pkg
+    # -   id: golangci-lint-repo-mod
+    # -   id: golangci-lint-repo-pkg
     #
     # Invoking Custom Go Tools
     # - Configured *entirely* through the `args` attribute, ie:

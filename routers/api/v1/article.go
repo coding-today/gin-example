@@ -13,7 +13,12 @@ import (
 	"github.com/unknwon/com"
 )
 
-//获取单个文章
+// @Summary 获取文章详情
+// @Produce  json
+// @Tags article
+// @Param name query string true "ID"
+// @Success 200 {string} string "{"code":200,"data":{},"msg":"ok"}"
+// @Router /api/v1/articles/{id} [get]
 func GetArticle(c *gin.Context) {
 
 	id := com.StrTo(c.Param("id")).MustInt()
@@ -42,7 +47,13 @@ func GetArticle(c *gin.Context) {
 	})
 }
 
-//获取多个文章
+// @Summary 获取文章列表
+// @Produce  json
+// @Tags article
+// @Param state query string true "state"
+// @Param tag_id query string true "tag_id"
+// @Success 200 {string} string "{"code":200,"data":{},"msg":"ok"}"
+// @Router /api/v1/articles [get]
 func GetArticles(c *gin.Context) {
 
 	data := make(map[string]interface{})
@@ -85,7 +96,17 @@ func GetArticles(c *gin.Context) {
 
 }
 
-//新增文章
+// @Summary 新增文章
+// @Produce  json
+// @Tags article
+// @Param title query string true "title"
+// @Param desc query string true "desc"
+// @Param content query string true "content"
+// @Param created_by query string true "created_by"
+// @Param state query string true "state"
+// @Param tag_id query string true "tag_id"
+// @Success 200 {string} string "{"code":200,"data":{},"msg":"ok"}"
+// @Router /api/v1/articles [post]
 func AddArticle(c *gin.Context) {
 	tagId := com.StrTo(c.Query("tag_id")).MustInt()
 	title := c.Query("title")
@@ -131,7 +152,12 @@ func AddArticle(c *gin.Context) {
 	})
 }
 
-//删除文章
+// @Summary 删除文章
+// @Produce  json
+// @Tags article
+// @Param id query string true "id"
+// @Success 200 {string} string "{"code":200,"data":{},"msg":"ok"}"
+// @Router /api/v1/articles/{id} [delete]
 func DeleteArticle(c *gin.Context) {
 	id := com.StrTo(c.Param("id")).MustInt()
 
@@ -159,7 +185,17 @@ func DeleteArticle(c *gin.Context) {
 	})
 }
 
-//更新文章
+// @Summary 更新文章
+// @Produce  json
+// @Tags article
+// @Param title query string true "title"
+// @Param desc query string true "desc"
+// @Param content query string true "content"
+// @Param created_by query string true "created_by"
+// @Param state query string true "state"
+// @Param tag_id query string true "tag_id"
+// @Success 200 {string} string "{"code":200,"data":{},"msg":"ok"}"
+// @Router /api/v1/articles/{id} [put]
 func EditArticle(c *gin.Context) {
 
 	valid := validation.Validation{}

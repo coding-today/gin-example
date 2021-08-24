@@ -1,0 +1,242 @@
+info:
+  contact: {}
+  license: {}
+paths:
+  /api/v1/articles:
+    get:
+      parameters:
+      - description: state
+        in: query
+        name: state
+        required: true
+        type: string
+      - description: tag_id
+        in: query
+        name: tag_id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"code":200,"data":{},"msg":"ok"}'
+          schema:
+            type: string
+      summary: 获取文章列表
+      tags:
+      - article
+    post:
+      parameters:
+      - description: title
+        in: query
+        name: title
+        required: true
+        type: string
+      - description: desc
+        in: query
+        name: desc
+        required: true
+        type: string
+      - description: content
+        in: query
+        name: content
+        required: true
+        type: string
+      - description: created_by
+        in: query
+        name: created_by
+        required: true
+        type: string
+      - description: state
+        in: query
+        name: state
+        required: true
+        type: string
+      - description: tag_id
+        in: query
+        name: tag_id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"code":200,"data":{},"msg":"ok"}'
+          schema:
+            type: string
+      summary: 新增文章
+      tags:
+      - article
+  /api/v1/articles/{id}:
+    delete:
+      parameters:
+      - description: id
+        in: query
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"code":200,"data":{},"msg":"ok"}'
+          schema:
+            type: string
+      summary: 删除文章
+      tags:
+      - article
+    get:
+      parameters:
+      - description: ID
+        in: query
+        name: name
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"code":200,"data":{},"msg":"ok"}'
+          schema:
+            type: string
+      summary: 获取文章详情
+      tags:
+      - article
+    put:
+      parameters:
+      - description: title
+        in: query
+        name: title
+        required: true
+        type: string
+      - description: desc
+        in: query
+        name: desc
+        required: true
+        type: string
+      - description: content
+        in: query
+        name: content
+        required: true
+        type: string
+      - description: created_by
+        in: query
+        name: created_by
+        required: true
+        type: string
+      - description: state
+        in: query
+        name: state
+        required: true
+        type: string
+      - description: tag_id
+        in: query
+        name: tag_id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"code":200,"data":{},"msg":"ok"}'
+          schema:
+            type: string
+      summary: 更新文章
+      tags:
+      - article
+  /api/v1/tags:
+    get:
+      parameters:
+      - description: Name
+        in: query
+        name: name
+        type: string
+      - description: State
+        in: query
+        name: state
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"code":200,"data":{},"msg":"ok"}'
+          schema:
+            type: string
+      summary: 获取所有文章标签
+      tags:
+      - tags
+    post:
+      parameters:
+      - description: Name
+        in: query
+        name: name
+        required: true
+        type: string
+      - description: State
+        in: query
+        name: state
+        type: integer
+      - description: CreatedBy
+        in: query
+        name: created_by
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"code":200,"data":{},"msg":"ok"}'
+          schema:
+            type: string
+      summary: 新增文章标签
+      tags:
+      - tags
+  /api/v1/tags/{id}:
+    delete:
+      parameters:
+      - description: ID
+        in: query
+        name: name
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"code":200,"data":{},"msg":"ok"}'
+          schema:
+            type: string
+      summary: 删除文章标签
+      tags:
+      - tags
+    put:
+      parameters:
+      - description: ID
+        in: path
+        name: id
+        required: true
+        type: integer
+      - description: ID
+        in: query
+        name: name
+        required: true
+        type: string
+      - description: State
+        in: query
+        name: state
+        type: integer
+      - description: ModifiedBy
+        in: query
+        name: modified_by
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"code":200,"data":{},"msg":"ok"}'
+          schema:
+            type: string
+      summary: 修改文章标签
+      tags:
+      - tags
+swagger: "2.0"
